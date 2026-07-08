@@ -9,6 +9,7 @@ repositories {
     mavenCentral()
 }
 
+// 의존성
 dependencies {
     // Source: https://mvnrepository.com/artifact/org.springframework/spring-context
     implementation("org.springframework:spring-context:7.0.8")
