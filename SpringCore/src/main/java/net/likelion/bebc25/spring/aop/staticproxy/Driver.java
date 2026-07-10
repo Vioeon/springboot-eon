@@ -1,4 +1,4 @@
-package net.likelion.bebc25.spring;
+package net.likelion.bebc25.spring.aop.staticproxy;
 
 public class Driver {
     //    private GasolineCar car = new GasolineCar(); // 의존 관계
@@ -6,6 +6,7 @@ public class Driver {
 
     // DI 개념 - 의존성 주입
     public Driver(Car car) {
+        System.out.println("called constructor Injection: " + car);
         this.car = car;
     }
 

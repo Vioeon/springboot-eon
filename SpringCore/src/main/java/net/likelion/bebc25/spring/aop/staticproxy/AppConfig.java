@@ -1,4 +1,4 @@
-package net.likelion.bebc25.spring;
+package net.likelion.bebc25.spring.aop.staticproxy;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,22 +8,14 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
     @Bean // 스프링 빈으로 등록 (메소드명인 car가 빈의 이름이 됨)
     public Car car(){
-        return new GasolineCar();
+//        Car target = new GasolineCar();
+        Car target = new HybridCar();
+        Car logProxy = new LogProxy(target);
+        return logProxy;
     }
-
-//    @Bean // 스프링 빈으로 등록 (메소드명인 car가 빈의 이름이 됨)
-//    public Car car2(){
-//        return new HybridCar();
-//    }
 
     @Bean // 스프링이 생성해서 관리할 객체
     public Driver driver(Car car){
         return new Driver(car); // DI
     }
 }
-
-// 스프링 컨테이너가 하는일
-//AppConfig config = new AppConfig();
-//Car car = config.car();
-//Car car2 = config.car2();
-//Driver driver = config.driver(car? car2? 어떤거할지 몰라서 오류남);
