@@ -32,20 +32,27 @@ public class BoardController {
         fakePosts.add(post2);
     }
 
+    // 목록 반환
     public List<PostDto> getPosts() {
         List<PostDto> list = fakePosts;
         return list;
     }
+    // 해당 id의 Dto(데이터를 전달하기 위한 객체) 반환
     public PostDto getPost(int id){
         PostDto post = null;
+
+        // 전체 게시글 List인 fakePosts에서 id가 매개변수로 받은 id와 같은 객체찾기
         for(PostDto p : fakePosts){
+            // 객체 p의 id가 매개변수로 받은 id와 같은지
             if(p.getId() == id){
                 post = p;
                 break;
             }
         }
+        // 찾은 객체 반환
         return post;
     }
+
     // index.html 요청을 처리하는 컨트롤러
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     @ResponseBody
@@ -203,7 +210,7 @@ public class BoardController {
                     </table>
                     <div>
                       <a href="edit.html" class="btn">수정하기</a>
-                      <a href="/01/board/list.html" class="btn btn-secondary">목록으로</a>
+                      <a href="list.html" class="btn btn-secondary">목록으로</a>
                     </div>
                   </div>
                 </body>
