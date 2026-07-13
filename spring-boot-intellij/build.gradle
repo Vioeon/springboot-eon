@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '4.1.0'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'io.freefair.lombok' version '9.5.0'
 }
 
 group = 'net.likelion.bebc25'
@@ -19,10 +20,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.projectlombok:lombok") // 컴파일 시점에 롬복 어노테이션 api 사용
-    annotationProcessor("org.projectlombok:lombok") // 컴파일 빌드 단계에서 롬복 어노테이션 프로세서를 구동하여 자동 생성
-    testCompileOnly("org.projectlombok:lombok") // 테스트 환경에서도 롬복 어노테이션 사용할 경우 추가
-    testAnnotationProcessor("org.projectlombok:lombok") // 테스트 컴파일 단계에서 프로세서 구동
+//    compileOnly("org.projectlombok:lombok") // 컴파일 시점에 롬복 어노테이션 api 사용
+//    annotationProcessor("org.projectlombok:lombok") // 컴파일 빌드 단계에서 롬복 어노테이션 프로세서를 구동하여 자동 생성
+//    testCompileOnly("org.projectlombok:lombok") // 테스트 환경에서도 롬복 어노테이션 사용할 경우 추가
+//    testAnnotationProcessor("org.projectlombok:lombok") // 테스트 컴파일 단계에서 프로세서 구동
 
     implementation("org.springframework.boot:spring-boot-starter-aspectj")
     implementation 'org.springframework.boot:spring-boot-starter'
