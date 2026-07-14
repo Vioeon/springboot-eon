@@ -66,7 +66,7 @@ public class BoardController {
                 <body>
                   <div class="container">
                     <div class="welcome-card">
-                      <h1>스프링 부트 게시판 v.02</h1>
+                      <h1>스프링 부트 게시판 v.01</h1>
                       <p>스프링 부트 게시판에 오신걸 환영합니다.</p>
                       <p><a href="/01/board/list.html">01 - Controller에서 HTML하드코딩</a></p>
                       <p>현재 시간은 %s 입니다</p>
