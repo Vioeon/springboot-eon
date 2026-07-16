@@ -48,7 +48,6 @@ public class JdbcTemplatePostRepository implements PostRepository{
         return jdbcTemplate.queryForObject("SELECT id, author, title, content, secret, created_at FROM post2 WHERE id = ?", postRowMapper, id);
     }
 
-    @Override
     public void save(PostDto post) {
         jdbcTemplate.update("INSERT INTO post2(author, title, content) VALUE (?, ?, ?)"
                 , post.getAuthor()
