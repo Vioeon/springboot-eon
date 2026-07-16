@@ -4,7 +4,6 @@ import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import net.likelion.bebc25.board03.post.dto.PostDto;
 import net.likelion.bebc25.board03.post.service.PostService;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

@@ -4,10 +4,12 @@ import net.likelion.bebc25.board03.post.dto.PostDto;
 import net.likelion.bebc25.board03.post.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class PostServiceImpl implements PostService {
     // 서비스 인터페이스 구현
     // 사용자 관점에서 컨트롤러가 호출할 것들
