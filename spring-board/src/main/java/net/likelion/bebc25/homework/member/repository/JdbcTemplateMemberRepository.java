@@ -58,7 +58,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     };
 
     /**
-     * {@inheritDoc}
+     * {@inheritDoc} 신규 회원 정보 저장
      */
     @Override
     public void save(MemberDto member) {
@@ -70,7 +70,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritDoc} username 회원 조회
      */
     @Override
     public MemberDto findByUsername(String username) {
@@ -84,7 +84,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritDoc} id 회원 조회
      */
     @Override
     public MemberDto findById(int id) {
@@ -92,7 +92,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritDoc} 회원 정보 수정
      */
     @Override
     public void update(MemberDto member) {
@@ -105,7 +105,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritDoc} id 회원 삭제
      */
     @Override
     public void deleteById(int id) {
@@ -114,7 +114,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritDoc} 회원 목록 조회
      */
     @Override
     public List<MemberDto> findAll() {

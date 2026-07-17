@@ -34,7 +34,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     /**
-     * {@inheritDoc} 로그인 ?????????? 비번 검증 어케하지
+     * {@inheritDoc} 로그인
      */
     @Override
     public MemberDto login(String username, String password) {
