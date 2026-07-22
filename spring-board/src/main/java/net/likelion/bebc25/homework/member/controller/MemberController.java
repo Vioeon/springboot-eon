@@ -53,7 +53,7 @@ public class MemberController {
      *
      * @return 회원 가입 화면으로의 redirect 경로
      */
-    @GetMapping("/register.html")
+    @GetMapping("/register.html") // 회원가입 버튼 누르면
     public String getRegisterForm(@ModelAttribute("memberForm") MemberDto memberDto) {
         // 실습 영역
         return "member/register";
@@ -65,15 +65,16 @@ public class MemberController {
      * @param memberDto 회원 가입 폼 입력 데이터 DTO
      * @return 로그인 화면으로의 redirect 경로
      */
-    @PostMapping("/register")
+    @PostMapping("/register")  // register.html에서 입력받은 데이터가 있는 memberForm객체를 MemberDto 타입의 memberDto 객체로 받아온다.
     public String register(@Valid @ModelAttribute("memberForm") MemberDto memberDto, // Validation 검증 대상 객체
                            BindingResult bindingResult) {
         // 실습 영역
         if (bindingResult.hasErrors()) { // 검증에 실패했을 경우
             return "member/register"; // 작성중이던 페이지로 다시 보낸다.
         }
-        memberService.register(memberDto);
-        return "redirect:/member/login.html";
+        memberService.register(memberDto);  // db에 데이터 저장
+
+        return "redirect:/member/login.html"; // 로그인 창 띄움
     }
 
     /**
